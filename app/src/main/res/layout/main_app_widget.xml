@@ -1,0 +1,38 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.Navit.AppWidget.Container"
+    android:background="@drawable/shape_rounded_corners_back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:theme="@style/Theme.Navit.AppWidgetContainer">
+
+    <StackView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/listview"
+        android:alpha="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:loopViews="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="ボタンを押して更新してください"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="40dp"/>
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/refresh_bg"
+        android:scaleType="fitXY"
+        android:src="@drawable/refresh" />
+
+</RelativeLayout>
