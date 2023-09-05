@@ -44,8 +44,8 @@ class MainAppWidgetConfigureActivity : Activity() {
             binding = MainAppWidgetConfigureBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        appWidgetText = binding.appwidgetText as EditText
-        binding.addButton.setOnClickListener(onClickListener)
+        appWidgetText = binding.inputGoalPoint
+        binding.searchPoint.setOnClickListener(onClickListener)
 
         // Find the widget id from the intent.
         val intent = intent
