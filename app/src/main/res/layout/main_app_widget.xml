@@ -1,5 +1,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/Widget.Navit.AppWidget.Container"
     android:background="@drawable/shape_rounded_corners_back"
     android:layout_width="match_parent"
@@ -7,7 +8,7 @@
     android:padding="0dp"
     android:theme="@style/Theme.Navit.AppWidgetContainer">
 
-    <StackView xmlns:android="http://schemas.android.com/apk/res/android"
+    <StackView
         android:id="@+id/listview"
         android:alpha="1"
         android:layout_width="match_parent"
@@ -19,20 +20,23 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="ボタンを押して更新してください"
+        android:layout_marginStart="40dp"
         android:gravity="center_vertical"
-        android:layout_marginLeft="40dp"/>
+        android:text="@string/widget_error"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/background"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/refresh_bg"
+        android:contentDescription="@string/reload_btn"
         android:scaleType="fitXY"
-        android:src="@drawable/refresh" />
+        android:src="@drawable/refresh"
+        tools:ignore="ImageContrastCheck,RedundantDescriptionCheck" />
 
 </RelativeLayout>
