@@ -3,6 +3,7 @@ package com.example.navit
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
+import android.content.Intent
 import android.widget.RemoteViews
 
 /**
@@ -42,11 +43,11 @@ internal fun updateAppWidget(
     appWidgetManager: AppWidgetManager,
     appWidgetId: Int
 ) {
-//    val widgetText = loadTitlePref(context, appWidgetId)
-    // Construct the RemoteViews object
-    val views = RemoteViews(context.packageName, R.layout.main_app_widget)
+    val intent = Intent(context, MainAppWidgetService::class.java)
+    val views = RemoteViews(context.packageName, R.layout.main_app_widget).apply{
+        setRemoteAdapter(R.id.stack_view,intent)
+        setEmptyView(R.id.stack_view, R.id.empty_view)
+    }
 
-
-    // Instruct the widget manager to update the widget
     appWidgetManager.updateAppWidget(appWidgetId, views)
 }
