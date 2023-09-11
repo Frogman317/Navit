@@ -12,7 +12,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:text="目的地"
+        android:text="@string/goal_label"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="47dp" />
@@ -22,20 +22,19 @@
         android:id="@+id/input_goal_point"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/inputGoalLabel"
         android:layout_marginHorizontal="20dp"
-        android:hint="目的地を入力してください"
+        android:hint="@string/goal_label_input"
         android:textSize="20sp"
         android:inputType="text"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="81dp" />
+        tools:layout_editor_absoluteY="81dp"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/error_msg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/input_goal_point"
         android:layout_marginHorizontal="20dp"
         android:textColor="#ff3300"
         tools:ignore="MissingConstraints"
@@ -48,7 +47,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:text="現在セットされている目的地"
+        android:text="@string/set_goal_label"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="47dp" />
@@ -58,11 +57,10 @@
         android:id="@+id/setting_goal_point"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
         android:textSize="20sp"
-        android:layout_below="@id/inputGoalLabel"
         android:layout_marginHorizontal="20dp"
-        android:text="目的地がセットされていません"
+        android:text="@string/set_goal_text"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="81dp" />
@@ -76,12 +74,11 @@
 
         <Button
             android:id="@+id/search_point"
-            android:width="300dp"
+
             android:layout_margin="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="SearchPoint"
-            android:text="検索"
+            android:text="@string/search"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>

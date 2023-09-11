@@ -8,4 +8,6 @@
     <string name="search">検索</string>
     <string name="widget_error">ボタンを押して更新してください</string>
     <string name="reload_btn">Reload Button</string>
+    <string name="set_goal_label">現在セットされている目的地</string>
+    <string name="set_goal_text">目的地がセットされていません</string>
 </resources>
