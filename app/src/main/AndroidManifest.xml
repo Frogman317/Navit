@@ -24,13 +24,15 @@
                 android:resource="@xml/main_app_widget_info" />
         </receiver>
 
-        <activity
-            android:name=".MainAppWidgetConfigureActivity"
+        <service
+            android:name=".MainAppWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
             android:exported="false">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+                <action android:name="android.widget.RemoteViews" />
             </intent-filter>
-        </activity>
+        </service>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

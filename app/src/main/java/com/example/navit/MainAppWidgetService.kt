@@ -24,42 +24,41 @@ class StackRemoteViewsFactory(
         arrayOf("名鉄名古屋本線", "名鉄名古屋本線", "名鉄名古屋本線")
     )
     override fun onCreate() {
-        TODO("Not yet implemented")
     }
 
     override fun onDataSetChanged() {
-        TODO("Not yet implemented")
     }
 
     override fun onDestroy() {
-        TODO("Not yet implemented")
     }
 
     override fun getCount(): Int {
-        TODO("Not yet implemented")
+        return 3
     }
 
     override fun getViewAt(position: Int): RemoteViews {
-        TODO("Not yet implemented")
         return RemoteViews(context.packageName, R.layout.main_app_widget_item).apply {
-            setTextViewText(R.id.widget_item, testData[0][position])
+            setTextViewText(R.id.ride_time, testData[0][position])
+            setTextViewText(R.id.drop_off_time, testData[1][position])
+            setTextViewText(R.id.last_station_text, testData[2][position])
+            setTextViewText(R.id.route_text, testData[3][position])
         }
     }
 
-    override fun getLoadingView(): RemoteViews {
-        TODO("Not yet implemented")
+    override fun getLoadingView(): RemoteViews? {
+        return null
     }
 
     override fun getViewTypeCount(): Int {
-        TODO("Not yet implemented")
+        return 1
     }
 
     override fun getItemId(position: Int): Long {
-        TODO("Not yet implemented")
+        return position.toLong()
     }
 
     override fun hasStableIds(): Boolean {
-        TODO("Not yet implemented")
+        return false
     }
 
 }
